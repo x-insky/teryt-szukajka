@@ -1,3 +1,6 @@
+import 'react-app-polyfill/ie11';   // wstępnie zapewnia uruchomienie projektu w IE 11 
+import 'react-app-polyfill/stable'; // j.w. 
+import 'core-js/stable/symbol';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
