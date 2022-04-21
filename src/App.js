@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import react, { Component } from 'react';
 import './App.css';
+import AboutApp from './components/AboutApp';
+import Searcher from './components/Searcher';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  constructor() {
+    super();
+
+    this.state = {
+      testText: "Podtytuł nr 3 (treść dynamiczna)"
+    };
+  }
+
+
+
+  render() {
+    return (
+      <div className="app-container">
+
+        <h2>Teryt szukajka</h2>
+
+        <AboutApp someText={this.state.testText} />
+
+        <Searcher />
+
+      </div>
+    );
+  }
+
 }
 
 export default App;

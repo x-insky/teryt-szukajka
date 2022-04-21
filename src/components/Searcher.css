@@ -1,0 +1,11 @@
+.search-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: beige;
+}
+
+.search-box > input {
+  min-width: 50%;
+}
