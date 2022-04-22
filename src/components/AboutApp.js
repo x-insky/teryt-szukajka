@@ -1,4 +1,4 @@
-import './AboutApp.css';
+import './AboutApp.scss';
 
   // wstępnie można zacząc od komponentu funkcyjnego
 function AboutApp (props) {

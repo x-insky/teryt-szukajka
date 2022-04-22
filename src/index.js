@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */    // wyłączenie wbudowanego mechanizmu transformacji na tryb wcześniejszy
-import 'react-app-polyfill/ie11';   // wstępnie zapewnia uruchomienie projektu w IE 11 
+import 'react-app-polyfill/ie11';   // wstępnie zapewnia uruchomienie projektu w IE 11
 import 'core-js/stable';    // cały folder jest importowany
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

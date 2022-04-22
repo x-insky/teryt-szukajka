@@ -1,4 +1,9 @@
 .about {
   padding: 0.75rem 1.5rem;
   background-color: wheat;
-}
+
+  & > h2 {
+    margin: 0.5rem;
+  }
+
+} // .about

@@ -1,0 +1,11 @@
+.app-container {
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 0.25em 0;
+  background-color: whitesmoke;
+
+  & > h2 {
+    margin: 0.75rem;
+  }
+
+} // .app-container
