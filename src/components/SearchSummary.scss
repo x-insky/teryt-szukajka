@@ -1,0 +1,17 @@
+.search-summary {
+  margin: 2rem 1rem;
+  padding: 0.25rem 1rem;
+  background-color: palegreen;
+  transition: background-color 0.3s 0.05s;
+
+  &:hover {
+    background-color: darken( #98fb98, 7.5% ); // palegreen == #98fb98
+    ;
+  }
+
+  h3 {
+    margin: 0.25rem 0;
+    color: darkgreen;
+  }
+
+} // .search-summary
