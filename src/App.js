@@ -1,4 +1,4 @@
-import react, { Component } from 'react';
+import React, { Component } from 'react';
 import './App.scss';
 import AboutApp from './components/AboutApp';
 import LoadingNotifier from './components/LoadingNotifier';
@@ -38,7 +38,7 @@ class App extends Component {
         isLoadingNow: false,
         isLoadedSuccesfully: true,
         isResultStage: true,
-        searchText: `(jakaś wartość, która ma pochodzić z formularza) + ${searchText}`
+        searchText: searchText    // czy ta duplikacja jest celowa, chwilę wcześniej tekst także zgłoszony do wpsiania w stan?!
        })
     }, 1111);
   }
@@ -47,6 +47,7 @@ class App extends Component {
 
   handleActivateSearch = ( searchingText ) => {
     console.log("uruchamiam zmianę stanu dla wyszukiwania");
+      //  każde ponowione wyszukiwanie nie zdejmuje etapu wyników, które już mogą być prezentowane (WCZEŚNIEJSZE zapytania), ale już z BIEŻĄCĄ treścią!; ewentualnie zmodyfikować na resetujace
     this.setState({
       isLoadingNow: true,
       searchText: searchingText
