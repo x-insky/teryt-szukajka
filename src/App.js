@@ -18,7 +18,8 @@ class App extends Component {
       isLoadedWithError: false,   // czy wystąpił błąd w odpowiedzi
       isResultStage: false,   // czy powienien być jakiś wynik prezentowany (ewentulanie zamiast: wyliczać ze stanu obu przeciwnych efektów zapyatania serwera)
 
-      searchText: ""  // treść pola wyszkiwania
+      searchText: "",  // treść pola wyszukiwania
+      textFound: ""   // też treść z pola, ale dla znalezionego już dopasowania/wyniku/wysyłanego_zapytania
 
     };
   }
@@ -38,7 +39,7 @@ class App extends Component {
         isLoadingNow: false,
         isLoadedSuccesfully: true,
         isResultStage: true,
-        searchText: searchText    // czy ta duplikacja jest celowa, chwilę wcześniej tekst także zgłoszony do wpsiania w stan?!
+        textFound: searchText    // czy ta duplikacja jest celowa, chwilę wcześniej tekst także zgłoszony do wpsiania w stan?!
        })
     }, 1111);
   }
@@ -85,7 +86,7 @@ class App extends Component {
 
         { this.state.isLoadingNow && <LoadingNotifier notificationHeader="Odpytywanie serwera..."/> /* warunkowe wstawianie komponentu, zeleżnie od stanu aplikacji */ }
 
-        { this.state.isLoadedSuccesfully && this.state.isResultStage && <SearchSummary searchValue={ this.state.searchText } /> }
+        { this.state.isLoadedSuccesfully && this.state.isResultStage && <SearchSummary searchValue={ this.state.textFound } /> }
 
       </div>
     );
