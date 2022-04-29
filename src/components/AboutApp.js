@@ -9,7 +9,9 @@ function AboutApp (props) {
   return (
     <div className="about">
       <h3>{someText}</h3>
-      <p>Aplikacja umożliwia wyszukiwanie <span>adresowe</span> dla ...</p>
+      <h5>Aplikacja umożliwia wyszukiwanie <span>adresowe</span> dla ...</h5>
+      <div className="about-linear-gradient"></div>
+      <p>Wyszukaj treści ... </p>
     </div>
   );
 }

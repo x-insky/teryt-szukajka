@@ -44,7 +44,7 @@ class Searcher extends Component {
           <button name="accept_search" className="bold" disabled={ isLoadingNow ? "disabled" : null } ref={ this.searchSubmitBtn } onClick={ this.handleClickOnStartSearching } >Wyszukaj</button>
         </div>
         <hr />
-        <h4>Zaawansowane</h4>
+        <h4>Wyszukiwanie zaawansowane ...</h4>
       </>
     );
   }

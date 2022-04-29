@@ -2,14 +2,22 @@
 
 .about {
   padding: 0.75rem 1.5rem;
-  background-color: wheat;
+  background-color: $lighten-complementary-color;
 
   & > h2 {
     margin: 0.5rem;
   }
 
-  & p > span {
+  & h5 > span {
     color: $red-test;
   }
+
+  .about-linear-gradient {
+    height: 0.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    background: linear-gradient(135deg, orange 10%, cyan);
+  }
+
 
 } // .about
