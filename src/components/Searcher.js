@@ -36,7 +36,7 @@ class Searcher extends Component {
     const { searchValue, isLoadingNow } = this.props;
 
     return (
-      <>
+      <div className="searcher">
         <div className="search-box">
           <label htmlFor="search_me">Zacznij szukać</label>
           <input type="text" name="search_me" id="search_me" disabled={ isLoadingNow ? "disabled" : null } ref={ this.searchTextInput } defaultValue={ searchValue } />
@@ -45,7 +45,7 @@ class Searcher extends Component {
         </div>
         <hr />
         <h4>Wyszukiwanie zaawansowane ...</h4>
-      </>
+      </div>
     );
   }
 }
