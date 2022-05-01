@@ -76,20 +76,23 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-container">
+      <>
+        <div className="app-container">
 
-        <h2>Teryt szukajka</h2>
-        <h5>{process.env.SUPER_SECRET_TEXT}</h5>  {/* test tekstu zadziała po prawidłowym skonfigurowaniu aplikacji do odczytania zmiennej środowiskowej */}
+          <h2>Teryt szukajka</h2>
+          <h5>{process.env.SUPER_SECRET_TEXT}</h5>  {/* test tekstu zadziała po prawidłowym skonfigurowaniu aplikacji do odczytania zmiennej środowiskowej */}
 
-        <AboutApp someText={ this.state.testText } />
+          <AboutApp someText={ this.state.testText } />
 
-        <Searcher searchValue={ this.state.searchText } isLoadingNow={ this.state.isLoadingNow } onStartSearching={ this.handleActivateSearch } onStopSearching={ this.handleDeactivateSearch } />
+          <Searcher searchValue={ this.state.searchText } isLoadingNow={ this.state.isLoadingNow } onStartSearching={ this.handleActivateSearch } onStopSearching={ this.handleDeactivateSearch } />
+
+          { this.state.isLoadedSuccesfully && this.state.isResultStage && <SearchSummary searchValue={ this.state.textFound } /> }
+
+        </div>
 
         { this.state.isLoadingNow && <LoadingNotifier notificationHeader="Odpytywanie serwera..."/> /* warunkowe wstawianie komponentu, zeleżnie od stanu aplikacji */ }
 
-        { this.state.isLoadedSuccesfully && this.state.isResultStage && <SearchSummary searchValue={ this.state.textFound } /> }
-
-      </div>
+      </>
     );
   }
 }

@@ -1,13 +1,25 @@
-.search-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: beige;
+.searcher {
+  background-color: peachpuff;
 
-  & > input {
-    font-size: 1.5em;
-    min-width: 66%;
+  .search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: beige;
+
+    & > input {
+      font-size: 1.5em;
+      min-width: 66%;
+    }
+
+  } // .search-box
+
+  hr {
+    background-color: coral;
   }
 
-} // .search-box
+  h4 {
+    padding: 1rem;
+  }
+} // .searcher
