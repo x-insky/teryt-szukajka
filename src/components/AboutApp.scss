@@ -3,6 +3,11 @@
 .about {
   padding: 0.75rem 1.5rem;
   background-color: $lighten-complementary-color;
+  transition: background-color 0.8s 0.1s;
+
+  &:hover {
+    background-color: $complementary-color;
+  }
 
   & > h2 {
     margin: 0.5rem;
@@ -17,7 +22,12 @@
     margin-left: -1.5rem;
     margin-right: -1.5rem;
     background: linear-gradient(135deg, orange 10%, cyan);
+    transition: background-color 1s, transform 0.5s 0.1s;
   }
 
+  &:hover .about-linear-gradient {
+    transform: translateY(-5px) scaleY(1.5);
+    background: linear-gradient(135deg, orange 40%, cyan);
+  }
 
 } // .about

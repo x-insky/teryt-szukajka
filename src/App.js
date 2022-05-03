@@ -79,7 +79,10 @@ class App extends Component {
       <>
         <div className="app-container">
 
-          <h2>Teryt szukajka</h2>
+          <div className="main-app-title">
+            <h2>Teryt szukajka</h2>
+          </div>
+
           <h5>{process.env.SUPER_SECRET_TEXT}</h5>  {/* test tekstu zadziała po prawidłowym skonfigurowaniu aplikacji do odczytania zmiennej środowiskowej */}
 
           <AboutApp someText={ this.state.testText } />
