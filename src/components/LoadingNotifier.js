@@ -6,6 +6,7 @@ function LoadingNotifier ({ notificationHeader="Trwa ładowanie..." }) {
   return (
     <div className="notification">
       <h3>{ notificationHeader }</h3>
+      <div className="rotated rotation-anim">T</div>
     </div>
   );
 }

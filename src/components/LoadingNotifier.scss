@@ -16,4 +16,44 @@
     font-size: 2em;
     color: darkgreen;
   }
+
+  .rotated {
+    display: block;   // domyślny typ elementu dowolny, docelowo to raczej będzie obrazek
+    width: 100px;
+    height: 100px;
+    margin: 5rem auto 0;
+    font-size: 3rem;
+    line-height: 6rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 3px black;
+    background-color: chartreuse;
+    border: 2px dotted darkgreen;
+  }
+
+  .rotation-anim {
+    animation: rotation_90-180deg 3s infinite;
+  }
+
+} // .notification
+
+
+// *** DEFINICJE ANIMACJE ***
+
+
+@keyframes rotation_90-180deg {
+  0%, 2% {
+      transform: rotate(0deg);
+  }
+  35% {
+      transform: scale(1.1) rotate(90deg);
+      filter: brightness(150%) contrast(200%);
+  }
+
+  70% {
+      transform: scale(1) rotate(180deg);
+  }
+  90%, 100% {
+      transform: rotate(0deg);
+  }
 }

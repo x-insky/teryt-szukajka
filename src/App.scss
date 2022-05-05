@@ -3,10 +3,13 @@
   margin: 1rem auto;
   padding: 0.25em 0;
   background-color: whitesmoke;
-  transition: background-color 0.3s;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  transition: background-color 0.3s, border-color 0.4s;
 
   &:hover {
     background-color: #f0f0f0; // whitesmoke == #f5f5f5
+    border-color: #ccc;   // lightgrey == #d3d3d3
   }
 
   .main-app-title {

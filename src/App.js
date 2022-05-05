@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   simulateAQueryToTheServer = searchText => {
-    const randomSecond = Math.floor( Math.random() * 1000 );
+    const randomSecond = Math.floor( Math.random() * 5000 ) + 1;
     console.log( randomSecond );
     setTimeout( () => {
       this.setState({
