@@ -1,42 +1,53 @@
-.notification {
+.cover-curtain {
   position: fixed;
-  z-index: 101;
-  width: 60vw;
-  height: 60vh;
-  top: 20vh;
-  left: 20vw;
-  padding: 2rem 4rem;
-  margin: 1rem auto;
-  background-color: rgb(189, 183, 107, 0.75);
-  border: 2px solid yellowgreen;
-  // transform: translate(-10vw, -30vh);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid black;
 
-  h3 {
-    text-align: center;
-    font-size: 2em;
-    color: darkgreen;
-  }
+  .notification {
+    position: fixed;
+    z-index: 101;
+    width: 35vw;
+    height: 35vh;
+    top: 25vh;
+    left: 30vw;
+    padding: 4rem;
+    margin: 1rem auto;
+    background-color: rgba(189, 183, 107, 0.75);
+    border: 2px solid yellowgreen;
+    user-select: none;
+    // transform: translate(-10vw, -30vh);
 
-  .rotated {
-    display: block;   // domyślny typ elementu dowolny, docelowo to raczej będzie obrazek
-    width: 100px;
-    height: 100px;
-    margin: 5rem auto 0;
-    font-size: 3rem;
-    line-height: 6rem;
-    text-align: center;
-    color: white;
-    text-shadow: 0 0 3px black;
-    background-color: chartreuse;
-    border: 2px dotted darkgreen;
-  }
+    h3 {
+      text-align: center;
+      font-size: 2em;
+      color: darkgreen;
+    }
 
-  .rotation-anim {
-    animation: rotation_90-180deg 3s infinite;
-  }
+    .rotated {
+      display: block;   // domyślny typ elementu dowolny, docelowo to raczej będzie obrazek
+      width: 100px;
+      height: 100px;
+      margin: 5rem auto 0;
+      font-size: 3rem;
+      line-height: 6rem;
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 3px black;
+      background-color: chartreuse;
+      border: 2px dotted darkgreen;
+    }
 
-} // .notification
+    .rotation-anim {
+      animation: rotation_90-180deg 3s infinite;
+    }
 
+  } // .notification
+} // .cover-curtain
 
 // *** DEFINICJE ANIMACJE ***
 
