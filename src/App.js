@@ -34,6 +34,8 @@ class App extends Component {
   }
 
   simulateAQueryToTheServer = searchText => {
+    const randomSecond = Math.floor( Math.random() * 5000 ) + 1;
+    console.log( randomSecond );
     setTimeout( () => {
       this.setState({
         isLoadingNow: false,
@@ -41,7 +43,7 @@ class App extends Component {
         isResultStage: true,
         textFound: searchText    // czy ta duplikacja jest celowa, chwilę wcześniej tekst także zgłoszony do wpsiania w stan?!
        })
-    }, 1111);
+    }, 1111 + randomSecond);
   }
 
     // ----- obsługa zdarzeń / event handling -----
@@ -79,8 +81,11 @@ class App extends Component {
       <>
         <div className="app-container">
 
-          <h2>Teryt szukajka</h2>
-          <h5>{process.env.SUPER_SECRET_TEXT}</h5>  {/* test tekstu zadziała po prawidłowym skonfigurowaniu aplikacji do odczytania zmiennej środowiskowej */}
+          <div className="main-app-title">
+            <h2>Teryt szukajka</h2>
+          </div>
+
+          <div>{process.env.SUPER_SECRET_TEXT}</div>  {/* test tekstu zadziała po prawidłowym skonfigurowaniu aplikacji do odczytania zmiennej środowiskowej */}
 
           <AboutApp someText={ this.state.testText } />
 

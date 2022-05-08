@@ -1,6 +1,6 @@
 .search-summary {
-  margin: 2rem 1rem;
-  padding: 0.25rem 1rem;
+  margin: 2rem 1rem 1rem;
+  padding: 1rem;
   background-color: palegreen;
   transition: background-color 0.3s 0.05s;
 
@@ -11,7 +11,28 @@
 
   h3 {
     margin: 0.25rem 0;
-    color: darkgreen;
+    color: green;
+
+    & span {
+      display: inline-block;
+      padding: 0.1rem 0.25rem;
+      font-style: italic;
+      color: darkgreen;
+      background-color: snow;
+
+    }
+  } // h3
+
+  .summary-box {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+    min-height: 8rem;
+    background-color: silver;
+
+    & p {
+      text-align: center;
+      background-color: darkgray;
+    }
   }
 
 } // .search-summary

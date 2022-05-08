@@ -3,3 +3,4 @@ $red-test: red;
 $main-color: darkgreen;
 $complementary-color: lightgray;
 $lighten-complementary-color: lighten($complementary-color, 10%);
+$darken-complementary-color: darken($complementary-color, 10%);
