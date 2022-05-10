@@ -1,8 +1,38 @@
 .regular-notification{
+  position: relative;
   background-color: red;
   padding: 0.25rem 0.5rem;
   margin: 0.5rem;
-  border: 3px dotted yellow;;
+  border: 3px dotted yellow;
+  transition: background-color 0.3s, border-style 0.4s, border-width 0.4s;
+
+  &::before {
+    position: absolute;
+    opacity: 1;   // domyślne czy potrzebne?
+    content: "!";
+    right: 0.25rem;
+    top: 0.2rem;
+    color: darkred;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    line-height: 1.25rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #eee;
+    border-radius: 50%;
+    transition: transform 0.2s, opacity 0.1s, color 0.4s, background-color 0.3s;
+  }
+
+  &:hover {
+    background-color: darken(red, 15%);
+    border-style: dashed;
+    border-width: 2px;
+
+    &::before {
+      color: red;
+      background-color: white;
+      transform: translateX(-0.35rem); // lub +5rem i // opacity: 0;
+    }
+  }
 
   h3 {
     padding: 0;
