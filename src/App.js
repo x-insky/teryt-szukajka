@@ -4,6 +4,7 @@ import AboutApp from './components/AboutApp';
 import LoadingNotifier from './components/LoadingNotifier';
 import Searcher from './components/Searcher';
 import SearchSummary from './components/SearchSummary';
+import Notifier from './components/Notifier';
 
 
 class App extends Component {
@@ -86,6 +87,8 @@ class App extends Component {
           </div>
 
           <div>{process.env.SUPER_SECRET_TEXT}</div>  {/* test tekstu zadziała po prawidłowym skonfigurowaniu aplikacji do odczytania zmiennej środowiskowej */}
+
+          { process.env.REACT_APP_ALMOST_SUPER_SECRET_TEXT && <Notifier notificationText={`${process.env.REACT_APP_ALMOST_SUPER_SECRET_TEXT}`}></Notifier> } {/* warunkowe wyświetlanie komponnetu, jeśli istnieje zmienna środowiskowa */}
 
           <AboutApp someText={ this.state.testText } />
 

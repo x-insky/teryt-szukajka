@@ -1,5 +1,6 @@
 .regular-notification{
   position: relative;
+  overflow: hidden;
   background-color: red;
   padding: 0.25rem 0.5rem;
   margin: 0.5rem;
@@ -10,7 +11,7 @@
     position: absolute;
     opacity: 1;   // domyślne czy potrzebne?
     content: "!";
-    right: 0.25rem;
+    right: 0.35rem;
     top: 0.2rem;
     color: darkred;
     font-size: 1.5rem;
@@ -26,11 +27,14 @@
     background-color: darken(red, 15%);
     border-style: dashed;
     border-width: 2px;
+    padding-top: calc(0.25rem + 1px);
+    padding-bottom: calc(0.25rem + 1px);
 
     &::before {
       color: red;
       background-color: white;
-      transform: translateX(-0.35rem); // lub +5rem i // opacity: 0;
+      transform: translateX(4rem); // lub +5rem i
+      opacity: 0;
     }
   }
 
